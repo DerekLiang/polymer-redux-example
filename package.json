@@ -6,7 +6,9 @@
   "dependencies": {
     "redux": "^3.0.5"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "polymer-redux": "^0.4.0"
+  },
   "scripts": {
     "start": "serve"
   },
