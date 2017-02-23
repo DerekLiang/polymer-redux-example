@@ -1,0 +1,27 @@
+<link rel="import" href="./bower_components/polymer/polymer.html">
+
+<dom-module id="written-number">
+  <template>
+    <div>[[number]]-[[writtenNumber]],</div>
+  </template>
+  <script>
+    Polymer({
+      is: 'written-number',
+      behaviors: [
+        ReduxBehavior
+      ],
+      properties: {
+        number: {
+          type: Number,
+        },
+        writtenNumber: {
+          type:String,
+          statePath: function(state){
+            return state.numberMap[this.number];
+          }
+        }
+      }
+    });
+  </script>
+
+</dom-module>
